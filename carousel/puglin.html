@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>
+        Carousel Plugin
+    </title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container mb-5">
+        <h2 class="text-center py-4">Boostrap Carousel Class</h2>
+        <div class="row py-3">
+            <div class="col-12 justify-content-center">
+                <div class="carousel slide carousel-fade" id="myCarousel">
+                    <div class="carousel-inner">
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-item active h-50" >
+                            <img src="image/1.jpg" alt="" class=" d-block w-100">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h2>First Slide</h2>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, accusantium!</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item h-50"  >
+                            <img src="image/2.jpg" alt="" class="d-block w-100">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h2>First Slide</h2>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, accusantium!</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item h-50"  >
+                            <img src="image/3.jpg" alt="" class=" w-100 ">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h2>First Slide</h2>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, accusantium!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#myCarousel" class="carousel-control-prev" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a href="#myCarousel" class="carousel-control-next" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+                </div>
+
+                <button id="prevBtn" class="btn btn-primary">Prev</button>
+                <button id="nextBtn" class="btn btn-primary">Next</button>
+                <button id="pauseBtn" class="btn btn-primary">Pause</button>
+                <button id="cycleBtn" class="btn btn-primary">Cycle</button>
+                <button id="oneBtn" class="btn btn-primary">One</button>
+                <button id="twoBtn" class="btn btn-primary">Two</button>
+                <button id="threeBtn" class="btn btn-primary">Three</button>
+
+            </div>
+        </div>
+    </div>  
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- <script>
+        // $(funtion(){
+        //   $('#myCarousel').carousel({
+        //      interval:2000,
+        //      wrap:false
+        //   })
+        // });
+    </script> -->
+
+    <script>
+        $(function(){
+            $('#prevBtn').click(function(){
+               $('#myCarousel').carousel('prev');
+            })
+            $('#nextBtn').click(function(){
+               $('#myCarousel').carousel('next');
+            })
+            $('#pauseBtn').click(function(){
+               $('#myCarousel').carousel('pause');
+            })
+            $('#cycleBtn').click(function(){
+               $('#myCarousel').carousel('cycle');
+            })
+            $('#oneBtn').click(function(){
+               $('#myCarousel').carousel(0);
+            })
+            $('#twoBtn').click(function(){
+               $('#myCarousel').carousel(1);
+            })
+            $('#threeBtn').click(function(){
+               $('#myCarousel').carousel(2);
+            })
+        })
+    </script>
+  </body>
+</html>
