@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>
+        Popover
+    </title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    
+  </head>
+  <body>
+    <div class="container mb-5">
+        <h2 class="text-center py-4">Boostrap POPOVER Class</h2>
+        <div class="row py-5">
+            <div class="col-7 mx-auto">
+                <button class="btn btn-primary m-5" data-placement="top" data-toggle="popover" title="Popover Head" data-content="popover goes here in top">Poover</button> <br>
+                <button class="btn btn-danger m-5" data-placement="bottom" data-toggle="popover" title="Popover Head" data-content="popover goes here in  bottom">Poover</button><br>
+                <button class="btn btn-success m-5" data-placement="right" data-toggle="popover" title="Popover Head" data-content="popover goes here in right">Poover</button> <br>
+                <button class="btn btn-info m-5" data-placement="left" data-toggle="popover" title="Popover Head" data-content="popover goes here in left">Poover</button> <br>
+
+
+                <button class="btn btn-primary m-5" data-placement="left" id="example" title="Popover Head" data-content="popover goes here in left">Poover</button> 
+                <button class="btn btn-danger" id="showBtn">show</button>
+                <button class="btn btn-danger" id="hideBtn">hide</button>
+                <button class="btn btn-danger" id="toggleBtn">toggle</button>
+
+                <br>
+
+
+                <button class="btn btn-dark m-5" id="exmple"  >Poover</button> <br>
+            </div>
+        </div>
+    </div>  
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+        $(function(){
+            $('[data-toggle="popover"]').popover();
+        });
+        $(function(){
+            $('#exmple').popover({
+                html:true,
+                title:"popover title",
+                content:"<h2>popover goes here in left </h2>",
+                placement:"left",
+            });
+        });
+        $(function(){
+            $('#example').popover();
+        });
+        $("#showBtn").click(function(){
+           $('#example').popover('show')
+        });
+        $("#hideBtn").click(function(){
+           $('#example').popover('hide')
+        });
+        $("#toggleBtn").click(function(){
+           $('#example').popover('toggle')
+        });
+    </script>
+  </body>
+</html>
